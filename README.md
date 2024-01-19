@@ -1,3 +1,12 @@
+## R&D
+
+Next.js App Router Course for research purposes
+
+### Roadmap:
+- [StyleX](https://stylexjs.com/) for styling
+- [Prisma](https://www.prisma.io/) for generating types
+
+
 ## Next.js App Router Course - Starter
 
 This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
