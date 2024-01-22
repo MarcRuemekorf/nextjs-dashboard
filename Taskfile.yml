@@ -11,6 +11,7 @@ tasks:
       - task: build
       - task: up
       - task: install-dependencies
+      - task: show-applications
 
   build:
     cmds:
@@ -26,6 +27,15 @@ tasks:
     cmds:
       - echo "\n=== Running npm installation ===\n"
       - docker compose run --interactive=false --rm -u $(id -u):$(id -g) dashboard npm install
+
+  show-applications:
+    cmds:
+      - cat docs/01-applications.md
+
+  stop:
+    cmds:
+      - echo "\n=== Stopping project containers ===\n"
+      - docker compose stop
 
   down:
     cmds:
