@@ -1,0 +1,37 @@
+version: "3"
+
+env:
+  RUN: docker compose run --interactive=false --rm -u $(id -u):$(id -g)
+  EXEC: docker compose exec -u $(id -u):$(id -g)
+
+tasks:
+  init:
+    cmds:
+      - echo "\n=== Initialise and run the project for development ===\n"
+      - task: build
+      - task: up
+      - task: install-dependencies
+
+  build:
+    cmds:
+      - echo "\n=== Building project containers ===\n"
+      - docker compose build
+
+  up:
+    cmds:
+      - echo "\n=== Starting project containers ===\n"
+      - docker compose up -d --remove-orphans
+
+  install-dependencies:
+    cmds:
+      - echo "\n=== Running npm installation ===\n"
+      - docker compose run --interactive=false --rm -u $(id -u):$(id -g) dashboard npm install
+
+  down:
+    cmds:
+      - echo "\n=== Stopping project containers and cleaning docker compose environment ===\n"
+      - docker compose down
+
+  run-shell:
+    cmds:
+      - docker compose exec -u $(id -u):$(id -g) dashboard sh

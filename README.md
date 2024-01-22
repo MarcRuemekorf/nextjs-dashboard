@@ -5,7 +5,7 @@ Next.js App Router Course for research purposes
 ### Roadmap:
 - [StyleX](https://stylexjs.com/) for styling
 - [Prisma](https://www.prisma.io/) for generating types
-- [Taskfile](https://taskfile.dev/) as buidltool for the project
+- [Taskfile](https://taskfile.dev/) as buildtool for the project
 
 
 ## Next.js App Router Course - Starter
