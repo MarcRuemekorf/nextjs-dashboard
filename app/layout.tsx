@@ -1,4 +1,5 @@
 import '@/app/ui/global.css'
+import { flexo } from '@/app/ui/fonts'
 
 export default function RootLayout({
   children,
@@ -6,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={flexo.className}>
       <body>{children}</body>
     </html>
   );
