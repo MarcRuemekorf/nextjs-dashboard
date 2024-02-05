@@ -1,4 +1,7 @@
-import '@/app/ui/global.css'
+import '@/app/assets/fontawesome/css/fontawesome.min.css';
+import '@/app/assets/fontawesome/css/brands.min.css'
+import '@/app/assets/fontawesome/css/solid.min.css'
+import '@/app/global.css'
 import { flexo } from '@/app/ui/fonts'
 
 export default function RootLayout({
